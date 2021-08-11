@@ -29,13 +29,15 @@ In order to train a model, please use the [main_code.py](main_code.py) code. The
 
 All pre-trained models are in the folder [models](models), where:
 * ``model_63_45``: model trained for the BCH(63, 45) code;
-* `model_relu_63_36`: model trained for BCH(63, 36) code using __ReLU__ as activation function.  
+* `model_relu_63_36`: model trained for BCH(63, 36) code using __ReLU__ as activation function;
+* `model_sigmoid_63_36`: model trained for BCH(63, 36) code using __sigmoid__ as activation function;
+*   
 
 
 ## Result
 
-To plot the ROC curve and compute the AUROC for a model trained on CIFAR-10 (in-distribution dataset) and tested on SVHN (out-of-distribution dataset), please use the [inference_plots.py](inference_plots.py) notebook. 
+To plot the results 
 
 <p align="center">
-	<img src="roc.png" width="500" />
+	<img src=".png" width="500" />
 </p>
