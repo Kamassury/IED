@@ -28,8 +28,8 @@ In order to train a model, please use the [main_code.py](main_code.py) code. The
 ### Pretrained models
 
 All pre-trained models are in the folder [models](models), where:
-* ``model_63_45``: trained model for the BCH(63, 45) code;
-* `model_relu_63_36`:   
+* ``model_63_45``: model trained for the BCH(63, 45) code;
+* `model_relu_63_36`: model trained for BCH(63, 36) code using __ReLU__ as activation function.  
 
 
 ## Result
