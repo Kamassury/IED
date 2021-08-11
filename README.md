@@ -18,7 +18,7 @@ If the code or the paper has been useful in your research, please add a citation
 
 ## Training a model
 
-In order to train a model, please use the [train.py](train.py) code. The default configuration (i.e., just running ```python train.py```) will train a ResNet50 model on the cross-entropy loss function. The following are the important parameters of the training:
+In order to train a model, please use the [main_code.py](main_code.py) code. The default configuration (i.e., just running ```python main_code.py```) will train a model on the cross-entropy loss function. The following are the important parameters of the training:
 ```
 --dataset: dataset to train on [cifar10/cifar100/tiny_imagenet]
 --dataset-root: path of the Tiny ImageNet dataset (not necessary for CIFAR-10/100)
@@ -32,5 +32,5 @@ In order to train a model, please use the [train.py](train.py) code. The default
 
 ### Pretrained models
 
-All the pretrained models for all the datasets can be.
+All pre-trained models are in the folder, where [train.py](train.py):
 
