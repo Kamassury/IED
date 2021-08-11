@@ -39,5 +39,5 @@ All pre-trained models are in the folder [models](models), where:
 Performances for BCH codes using the IED decoder are in the folder [results](results).
 
 <p align="center">
-	<img src=".png" width="500" />
+	<img src="images/figure_FER_36.pdf" width="500"/>
 </p>
