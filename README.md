@@ -22,21 +22,21 @@ If the code or the paper has been useful in your research, please add a citation
 
 In order to train a model, please use the [main_code.py](main_code.py) code. The default configuration (i.e., just running ```python main_code.py```) will train a model on the cross-entropy loss function. The following are the important parameters of the training:
 ```
---dataset: dataset to train on [cifar10/cifar100/tiny_imagenet]
+--dataset: 
 ```
 
 ### Pretrained models
 
 All pre-trained models are in the folder [models](models), where:
-* ``model_63_45``: model trained for the BCH(63, 45) code;
-* `model_relu_63_36`: model trained for BCH(63, 36) code using __ReLU__ as activation function;
-* `model_sigmoid_63_36`: model trained for BCH(63, 36) code using __sigmoid__ as activation function;
-*   
+* ``model_63_45``: trained model for the BCH(63, 45) code;
+* `model_relu_63_36`: trained model for BCH(63, 36) code using __ReLU__ as activation function;
+* `model_sigmoid_63_36`: trained model for BCH(63, 36) code using __Sigmoid__ as activation function;
+*  `model_BN_sigmoid_63_36`: trained model for BH(63, 36) code using __Sigmoid__ as activation function and __batch normalization layers__.
 
 
 ## Result
 
-To plot the results 
+Performances for BCH codes using the IED decoder are in the folder [results](results).
 
 <p align="center">
 	<img src=".png" width="500" />
