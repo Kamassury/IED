@@ -15,9 +15,21 @@ If the code or the paper has been useful in your research, please add a citation
   year={2021}
 }
 ```
----
-## 
----
+
+## Training a model
+
+In order to train a model, please use the [train.py](train.py) code. The default configuration (i.e., just running ```python train.py```) will train a ResNet50 model on the cross-entropy loss function. The following are the important parameters of the training:
+```
+--dataset: dataset to train on [cifar10/cifar100/tiny_imagenet]
+--dataset-root: path of the Tiny ImageNet dataset (not necessary for CIFAR-10/100)
+--loss: loss function of choice (cross_entropy/focal_loss/focal_loss_adaptive/mmce/mmce_weighted/brier_score)
+--gamma: gamma for focal loss
+--lamda: lambda value for MMCE
+--gamma-schedule: whether to use a scheduled gamma during training
+--save-path: path for saving models
+--model: model to train (resnet50/resnet110/wide_resnet/densenet121)
+```
+
 ### Pretrained models
 
 All the pretrained models for all the datasets can be.
