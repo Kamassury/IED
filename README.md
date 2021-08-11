@@ -18,12 +18,18 @@ If the code or the paper has been useful in your research, please add a citation
 
 ## Files 
 ``main_code``:
-## Training a model
 
-In order to train a model, please use the [main_code.py](main_code.py) code. The default configuration (i.e., just running ```python main_code.py```) will train a model on the cross-entropy loss function. The following are the important parameters of the training:
-```
---dataset: 
-```
+## Project overview
+For an overview of the project, follow the steps from the [main_code.py](main_code.py) code, namely:
+* Get the parity check matrix (H):   ``bch_par``  
+* Building the neural network: ``models_nets``
+* Model training: `training_nn`
+* Model inference using the IED decoder: ``BER_FER``
+* Plot of inference results: ``inference``
+
+The default configuration (using the function [get_training_model.py](get_training_model.py)), will train a model with the cross entropy as the loss function. The following are the important parameters of the training:
+
+ - ``get_training_model``:
 
 ### Pretrained models
 
