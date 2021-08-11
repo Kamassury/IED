@@ -40,13 +40,13 @@ Performances for BCH codes using the IED decoder are in the folder [results](res
 
 * BLER and BER for the BCH(63,45) code, respectively:
 <p align="center">
-	<img src="images/figure_FER_45.png" width="350"/>
-	<img src="images/figure_BER_45.png" width="350"/>
+	<img src="images/figure_FER_45.png" width="300"/>
+	<img src="images/figure_BER_45.png" width="300"/>
 </p>
 
 
 * BLER and BER for the BCH(63, 36) code, respectively:
 <p align="center">
-	<img src="images/figure_FER_36.png" width="350"/>
-	<img src="images/figure_BER_36.png" width="350"/>
+	<img src="images/figure_FER_36.png" width="300"/>
+	<img src="images/figure_BER_36.png" width="300"/>
 </p>
