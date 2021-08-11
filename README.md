@@ -23,16 +23,19 @@ If the code or the paper has been useful in your research, please add a citation
 In order to train a model, please use the [main_code.py](main_code.py) code. The default configuration (i.e., just running ```python main_code.py```) will train a model on the cross-entropy loss function. The following are the important parameters of the training:
 ```
 --dataset: dataset to train on [cifar10/cifar100/tiny_imagenet]
---dataset-root: path of the Tiny ImageNet dataset (not necessary for CIFAR-10/100)
---loss: loss function of choice (cross_entropy/focal_loss/focal_loss_adaptive/mmce/mmce_weighted/brier_score)
---gamma: gamma for focal loss
---lamda: lambda value for MMCE
---gamma-schedule: whether to use a scheduled gamma during training
---save-path: path for saving models
---model: model to train (resnet50/resnet110/wide_resnet/densenet121)
 ```
 
 ### Pretrained models
 
-All pre-trained models are in the folder [models](models):
+All pre-trained models are in the folder [models](models), where:
+* ``model_63_45``: trained model for the BCH(63, 45) code;
+* `model_relu_63_36`:   
 
+
+## Result
+
+To plot the ROC curve and compute the AUROC for a model trained on CIFAR-10 (in-distribution dataset) and tested on SVHN (out-of-distribution dataset), please use the [inference_plots.py](inference_plots.py) notebook. 
+
+<p align="center">
+	<img src="roc.png" width="500" />
+</p>
