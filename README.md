@@ -27,9 +27,10 @@ For an overview of the project, follow the steps from the [main_code.py](main_co
 * Model inference using the IED decoder: ``BER_FER``
 * Plot of inference results: ``inference``
 
-The default configuration (using the function [get_training_model.py](get_training_model.py)), will train a model with the cross entropy as the loss function. The following are the important parameters of the training:
+The default configuration (using the function [get_training_model.py](get_training_model.py)), will train a model with the cross entropy as the loss function. The following are the important parameters of the training 
 
- - ``get_training_model``:
+* ``training_nn(model, H, loss, lr, batch_size=2048, spe, epochs0, EbN0_dB, tec) ``, where:
+	* ``lr``: learning rate 
 
 ### Pretrained models
 
