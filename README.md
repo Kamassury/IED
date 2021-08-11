@@ -17,7 +17,7 @@ If the code or the paper has been useful in your research, please add a citation
 ```
 
 ## Files 
-``main_code`:`
+``main_code``:
 ## Training a model
 
 In order to train a model, please use the [main_code.py](main_code.py) code. The default configuration (i.e., just running ```python main_code.py```) will train a model on the cross-entropy loss function. The following are the important parameters of the training:
@@ -34,5 +34,5 @@ In order to train a model, please use the [main_code.py](main_code.py) code. The
 
 ### Pretrained models
 
-All pre-trained models are in the folder, where [train.py](train.py):
+All pre-trained models are in the folder [models](models):
 
