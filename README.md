@@ -20,14 +20,14 @@ If the code or the paper has been useful in your research, please add a citation
 ``main_code``:
 
 ## Project overview
-For an overview of the project, follow the steps from the [main_code.py](main_code.py) code, namely:
+For an overview of the project, follow the steps from the [main_code](main_code) code, namely:
 * Get the parity check matrix (H):   ``bch_par``  
 * Building the neural network: ``models_nets``
 * Model training: `training_nn`
 * Model inference using the IED decoder: ``BER_FER``
 * Plot of inference results: ``inference``
 
-The default configuration (using the function [get_training_model.py](get_training_model.py)), will train a model with the cross entropy as the loss function. The following are the important parameters of the training 
+The default configuration (using the function [get_training_model](get_training_model)), will train a model with the cross entropy as the loss function. The following are the important parameters of the training 
 
 * ``training_nn(model, H, loss, lr, batch_size, spe, epochs, EbN0_dB, tec) ``, where:
 	* ``model``: neural network for short length BCH code
@@ -56,7 +56,7 @@ To perform model inference for the BER and BLER metrics, use the code [ber_fer_r
 * ``p_initial``: ``EbN0_dB`` initial value for inference
 * ``p_end``: ``EbN0_dB`` final value for inference
 
-To plot inferences using a pre-trained model, use code .
+If you just want to load the pre-trained model, perform and plot the inference, use the code [load_infer_plot](load_infer_plot).
 
 ## Result
 
