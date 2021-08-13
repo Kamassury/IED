@@ -39,14 +39,11 @@ The default configuration (using the function [get_training_model](get_training_
 
 ---
 Important routines can be found in the code [uteis](uteis), especially:
-* Functions: 
-	* ``training_generator``: simulates the transmission of codewords via the AWGN channel
-	* ``getfer``: computes the metrics BLER, BER, ... 
-	* ``biawgn``, 
-	* ``getniter``, 
-	* ``custom_loss``: ``syndrome_loss``, 
 
-* Classes: ``SBND``, ``PrintFER``
+* ``training_generator``: simulates the transmission of codewords via the AWGN channel for model training
+* ``getfer``: computes the metrics BLER, BER, ... 
+* ``biawgn``: simulate codewords for inference
+* ``custom_loss``: custom loss function joining binary _cross entropy_ and _loss syndrome_ 
 
 ### Pretrained models
 
