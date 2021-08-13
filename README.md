@@ -48,6 +48,12 @@ All pre-trained models are in the folder [models](models), where:
 * `model_sigmoid_63_36`: trained model for BCH(63, 36) code using __Sigmoid__ as activation function;
 *  `model_BN_sigmoid_63_36`: trained model for BH(63, 36) code using __Sigmoid__ as activation function and __batch normalization layers__.
 
+### Model inference
+To perform model inference for the BER and BLER metrics, use the code [ber_fer_result](ber_fer_result), where:
+* ``max_nfe``:
+* `` T``:
+* ``p_initial``:
+* ``p_end``: 
 
 ## Result
 
