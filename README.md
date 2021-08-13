@@ -38,8 +38,14 @@ The default configuration (using the function [get_training_model](get_training_
 	* ``tec``: technique for changing the learning rate (`ReduceLROnPlateau` or `CyclicalLearningRate`)
 
 ---
-Important routines can be found in the code, namely:
-* Funções: ``bch_par``, ``training_generator``, ``getfer``, ``biawgn``, ``getniter``, ``syndrome_loss``, ``custom_loss``
+Important routines can be found in the code [uteis](uteis), especially:
+* Functions: 
+	* ``training_generator``: simulates the transmission of codewords via the AWGN channel
+	* ``getfer``: computes the metrics BLER, BER, ... 
+	* ``biawgn``, 
+	* ``getniter``, 
+	* ``custom_loss``: ``syndrome_loss``, 
+
 * Classes: ``SBND``, ``PrintFER``
 
 ### Pretrained models
