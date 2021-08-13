@@ -110,37 +110,6 @@ def biawgn(code, EbN0_dB, batch_size=2048, random_state=None):
         err = (code.decode(y) != c)
         yield err
 
-def getniter(code, error_generator, nframes):   
-    '''USE ONLY TO MEASURE NUMBER OF ITERATIONS
-    Example:
-    code = SBND(H, model)
-    result = getniter(code, biawgn(code, EbN0_dB=4, random_state=1), nframes=10000)
-    '''
-    err = next(error_generator)
-    assert len(err.shape) == 2
-    batch_size, n = err.shape
-    n_full_batches, partial_batch_size = np.divmod(nframes, batch_size)
-    has_partial_batch = int(partial_batch_size > 0)
-    nse = 0
-    nfe = 0
-    nsymbols = 0
-    nframes = 0
-    niter = 0
-    for i in range(n_full_batches + has_partial_batch):
-        if i > 0:
-            err = next(error_generator)
-        if i == n_full_batches:
-            err = err[:partial_batch_size]
-        nse += err.sum(axis=-1).sum(axis=-1)
-        nfe += err.any(axis=-1).sum(axis=-1)
-        nsymbols += np.prod(err.shape)
-        nframes += err.shape[0]
-        if hasattr(code, 'niter'):
-            niter += code.niter[:err.shape[0]].sum()
-    ser = nse/nsymbols
-    fer = nfe/nframes
-    result = {'niter':niter, 'fer':fer, 'nfe':nfe, 'nframes':nframes, 'ser':ser, 'nse':nse, 'nsymbols':nsymbols}
-    return result
 
 class SBND():
     '''Syndrome-Based Neural Decoder with Iterative Error Decimation'''
