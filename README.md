@@ -38,7 +38,7 @@ The default configuration (using the function [get_training_model.py](get_traini
 	* ``spe``: steps per epoch
 	* ``epochs``: number of epochs for training
 	* ``EbN0_dB``: ratio of energy per bit to noise power spectral density
-	* ``tec``: 
+	* ``tec``: technique for changing the learning rate (`ReduceLROnPlateau` or `CyclicalLearningRate`)
 
 ### Pretrained models
 
