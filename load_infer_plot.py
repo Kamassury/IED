@@ -11,9 +11,6 @@ from uteis import bch_par
 from ber_fer_result import BER_FER
 from inference_plots import inference_plot
 
-'''
-To load and perform the inference, uncomment the following commands
-'''
 
 # ---------------------------- Load Model --------------------------------
 # Example: BCH(63, 45) code
