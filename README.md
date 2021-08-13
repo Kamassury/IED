@@ -8,16 +8,13 @@ This repository contains the codes for [*Iterative Error Decimation for Syndrome
 If the code or the paper has been useful in your research, please add a citation to our work:
 
 ```
-@article{kamassury2021ied,
+@article{kamassury_ied,
   title={Iterative Error Decimation for Syndrome-Based Neural Network Decoders},
   author={Kamassury, Jorge K S and Silva, Danilo},
   journal={Journal of Communication and Information Systems},
   year={2021}
 }
 ```
-
-## Files 
-``main_code``:
 
 ## Project overview
 For an overview of the project, follow the steps from the [main_code](main_code) code, namely:
@@ -39,6 +36,11 @@ The default configuration (using the function [get_training_model](get_training_
 	* ``epochs``: number of epochs for training
 	* ``EbN0_dB``: ratio of energy per bit to noise power spectral density
 	* ``tec``: technique for changing the learning rate (`ReduceLROnPlateau` or `CyclicalLearningRate`)
+
+---
+Important routines can be found in the code, namely:
+* Funções: ``bch_par``, ``training_generator``, ``getfer``, ``biawgn``, ``getniter``, ``syndrome_loss``, ``custom_loss``
+* Classes: ``SBND``, ``PrintFER``
 
 ### Pretrained models
 
