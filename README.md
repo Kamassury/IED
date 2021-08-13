@@ -37,7 +37,8 @@ The default configuration (using the function [get_training_model.py](get_traini
 	* ``batch size``: batch size for training
 	* ``spe``: steps per epoch
 	* ``epochs``: number of epochs for training
-	* ``EbN0_dB``:
+	* ``EbN0_dB``: ratio of energy per bit to noise power spectral density
+	* ``tec``: 
 
 ### Pretrained models
 
