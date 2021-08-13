@@ -5,6 +5,8 @@
 
 This repository contains the codes for [*Iterative Error Decimation for Syndrome-Based Neural Network Decoders*](https://arxiv.org/abs/2012.00089) , accepted for publication in Journal of Communication and Information Systems (JCIS).
 
+**In this project, we introduce a new syndrome-based decoder where a deep neural network (DNN) estimates the error pattern from the reliability and syndrome of the received vector. The proposed algorithm works by iteratively selecting the most reliable positions to be the error bits of the error pattern, updating the vector received when a new position of the error pattern is selected**.
+
 If the code or the paper has been useful in your research, please add a citation to our work:
 
 ```
@@ -15,7 +17,7 @@ If the code or the paper has been useful in your research, please add a citation
   year={2021}
 }
 ```
-
+---
 ## Project overview
 For an overview of the project, follow the steps from the [main_code](main_code) code, namely:
 * Get the parity check matrix (H):   ``bch_par``  
@@ -45,6 +47,7 @@ Important routines can be found in the code [uteis](uteis), especially:
 * ``biawgn``: simulate codewords for inference
 * ``custom_loss``: custom loss function joining binary _cross entropy_ and _loss syndrome_ 
 
+---
 ### Pretrained models
 
 All pre-trained models are in the folder [models](models), where:
@@ -53,6 +56,7 @@ All pre-trained models are in the folder [models](models), where:
 * `model_sigmoid_63_36`: trained model for BCH(63, 36) code using __Sigmoid__ as activation function;
 *  `model_BN_sigmoid_63_36`: trained model for BH(63, 36) code using __Sigmoid__ as activation function and __batch normalization layers__.
 
+---
 ### Model inference
 To perform model inference for the BER and BLER metrics, use the code [ber_fer_result](ber_fer_result), where:
 
@@ -63,6 +67,7 @@ To perform model inference for the BER and BLER metrics, use the code [ber_fer_r
 
 If you just want to load the pre-trained model, perform and plot the inference, use the code [load_infer_plot](load_infer_plot).
 
+---
 ## Result
 
 Performances for BCH codes using the IED decoder are in the folder [results](results).
