@@ -50,10 +50,13 @@ All pre-trained models are in the folder [models](models), where:
 
 ### Model inference
 To perform model inference for the BER and BLER metrics, use the code [ber_fer_result](ber_fer_result), where:
-* ``max_nfe``:
-* `` T``:
-* ``p_initial``:
-* ``p_end``: 
+
+* ``max_nfe``: number of block errors
+* `` T``: number of iterations using __IED__
+* ``p_initial``: ``EbN0_dB`` initial value for inference
+* ``p_end``: ``EbN0_dB`` final value for inference
+
+To plot inferences using a pre-trained model, use code .
 
 ## Result
 
