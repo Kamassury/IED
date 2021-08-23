@@ -6,9 +6,9 @@
 [![Python 3.6](https://img.shields.io/badge/python-3.6.10-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/Kamassury/IED/blob/main/LICENSE)
 
-This repository contains the codes for [*Iterative Error Decimation for Syndrome-Based Neural Network Decoders*](https://arxiv.org/abs/2012.00089) , accepted for publication in Journal of Communication and Information Systems (JCIS).
+This repository contains the codes for the paper [*Iterative Error Decimation for Syndrome-Based Neural Network Decoders*](https://arxiv.org/abs/2012.00089), accepted for publication in the Journal of Communication and Information Systems (JCIS).
 
-**In this project, we introduce a new syndrome-based decoder where a deep neural network (DNN) estimates the error pattern from the reliability and syndrome of the received vector. The proposed algorithm works by iteratively selecting the most reliable positions to be the error bits of the error pattern, updating the vector received when a new position of the error pattern is selected**.
+**In this project, we introduce a new syndrome-based decoder where a deep neural network (DNN) estimates the error pattern from the reliability and syndrome of the received vector. The proposed algorithm works by iteratively selecting the most confident positions to be the error bits of the error pattern, updating the vector received when a new position of the error pattern is selected**.
 
 If the code or the paper has been useful in your research, please add a citation to our work:
 
@@ -22,14 +22,14 @@ If the code or the paper has been useful in your research, please add a citation
 ```
 ---
 ## Project overview
-For an overview of the project, follow the steps from the [main_code](main_code) code, namely:
+For an overview of the project, follow the steps from the [main_code](main_code.py) module, namely:
 * Get the parity check matrix (H):   ``bch_par``  
 * Building the neural network: ``models_nets``
 * Model training: `training_nn`
 * Model inference using the IED decoder: ``BER_FER``
 * Plot of inference results: ``inference``
 
-The default configuration (using the function [get_training_model](get_training_model)), will train a model with the cross entropy as the loss function. The following are the important parameters of the training 
+The default configuration (using the function in [get_training_model](get_training_model.py)) will train a model with the cross entropy as the loss function. The following are the important parameters of the training 
 
 * ``training_nn(model, H, loss, lr, batch_size, spe, epochs, EbN0_dB, tec) ``, where:
 	* ``model``: neural network for short length BCH code
@@ -43,7 +43,7 @@ The default configuration (using the function [get_training_model](get_training_
 	* ``tec``: technique for changing the learning rate (`ReduceLROnPlateau` or `CyclicalLearningRate`)
 
 ---
-Important routines can be found in the code [uteis](uteis), especially:
+Important routines can be found in the module [uteis](uteis.py), especially:
 
 * ``training_generator``: simulates the transmission of codewords via the AWGN channel for model training
 * ``getfer``: computes the metrics BLER, BER, ... 
@@ -61,14 +61,14 @@ All pre-trained models are in the folder [models](models), where:
 
 ---
 ### Model inference
-To perform model inference for the BER and BLER metrics, use the code [ber_fer_result](ber_fer_result), where:
+To perform model inference for the BER and BLER metrics, use the module [ber_fer_result](ber_fer_result.py), where:
 
 * ``max_nfe``: number of block errors
 * `` T``: number of iterations using __IED__
 * ``p_initial``: ``EbN0_dB`` initial value for inference
 * ``p_end``: ``EbN0_dB`` final value for inference
 
-If you just want to load the pre-trained model, perform and plot the inference, use the code [load_infer_plot](load_infer_plot).
+If you just want to load the pre-trained model, perform and plot the inference, use the script [load_infer_plot](load_infer_plot.py).
 
 ---
 ## Result
